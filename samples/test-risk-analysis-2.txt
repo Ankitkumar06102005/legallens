@@ -1,0 +1,61 @@
+SOFTWARE LICENSE AGREEMENT - RISK ANALYSIS TEST DOCUMENT #2
+
+This Software License Agreement ("Agreement") is made between SafeSoft Technologies ("Licensor") and SecureCorp ("Licensee") effective as of March 15, 2024.
+
+1. GRANT OF LICENSE
+Licensor hereby grants to Licensee a non-exclusive, non-transferable license to use the Software for internal business purposes only. The license is valid for a period of twenty-four (24) months from the Effective Date.
+
+Licensee may install the Software on up to fifty (50) workstations within their organization. Additional installations require written permission from Licensor.
+
+2. PAYMENT AND RENEWAL
+Licensee shall pay Licensor an annual license fee of $25,000, payable in advance. Payment is due within thirty (30) days of invoice receipt. Late payments shall incur a service charge of 1.5% per month.
+
+The license may be renewed for additional one-year periods upon mutual agreement of both parties. Either party may decline renewal by providing sixty (60) days written notice prior to expiration.
+
+3. INTELLECTUAL PROPERTY RIGHTS
+All rights, title, and interest in and to the Software remain with Licensor. Licensee acknowledges that the Software is proprietary and confidential to Licensor.
+
+Licensee shall not reverse engineer, decompile, disassemble, or attempt to derive the source code of the Software. Any violation of this provision shall result in immediate termination of this Agreement.
+
+4. WARRANTY AND SUPPORT
+Licensor warrants that the Software will perform substantially in accordance with its documentation for a period of ninety (90) days from delivery. Licensor's sole obligation for breach of warranty is to use reasonable efforts to correct any material defects.
+
+Licensor shall provide technical support during normal business hours (9:00 AM to 5:00 PM EST, Monday through Friday) for the first year of the license term at no additional charge.
+
+5. LIMITATION OF LIABILITY
+Licensor's liability under this Agreement shall be limited to the amount paid by Licensee for the Software license. In no event shall Licensor be liable for any indirect, incidental, or consequential damages.
+
+This limitation of liability shall not apply to damages resulting from Licensor's gross negligence or willful misconduct.
+
+6. CONFIDENTIALITY
+Each party agrees to maintain the confidentiality of the other party's confidential information for a period of three (3) years following termination of this Agreement.
+
+Confidential information shall not include information that is publicly available or independently developed by the receiving party.
+
+7. TERMINATION
+Either party may terminate this Agreement upon thirty (30) days written notice to the other party. Upon termination, Licensee shall immediately cease all use of the Software and return or destroy all copies.
+
+Licensor may terminate this Agreement immediately if Licensee breaches any material term and fails to cure such breach within fifteen (15) days of written notice.
+
+8. DATA SECURITY
+Licensor implements industry-standard security measures to protect Licensee data. Licensee data is stored in encrypted format and access is restricted to authorized personnel only.
+
+Licensor shall notify Licensee within twenty-four (24) hours of any security breach that may affect Licensee's data.
+
+9. COMPLIANCE AND AUDIT
+Licensee agrees to maintain accurate records of Software usage and to permit Licensor to audit such records upon reasonable notice during normal business hours.
+
+Any audit revealing underpayment of license fees shall be paid by Licensee within thirty (30) days, plus interest at the rate of 1% per month.
+
+10. GENERAL PROVISIONS
+This Agreement shall be governed by the laws of the State of California. Any disputes shall be resolved through mediation, and if unsuccessful, through binding arbitration.
+
+This Agreement may be amended only by written agreement signed by both parties. If any provision is found unenforceable, the remaining provisions shall remain in full force and effect.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
+
+SAFESOFT TECHNOLOGIES              SECURECORP
+By: _________________________      By: _________________________
+Name: Michael Johnson              Name: Sarah Wilson
+Title: President                   Title: CTO
+Date: _________________________    Date: _________________________
