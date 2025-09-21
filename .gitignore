@@ -3,6 +3,11 @@ node_modules/
 .DS_Store
 Thumbs.db
 
+# IDE/editor artifacts
+.vscode/
+.idea/
+.vs/
+
 # Env files
 **/.env
 **/.env.local
