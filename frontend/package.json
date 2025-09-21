@@ -2,6 +2,7 @@
   "name": "legalens-frontend",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://ankitkumar06102005.github.io/legalens/",
   "dependencies": {
     "@react-three/drei": "^9.88.13",
     "@react-three/fiber": "^8.15.11",
@@ -21,7 +22,12 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
+  },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
