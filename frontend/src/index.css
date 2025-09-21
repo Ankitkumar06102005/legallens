@@ -1,5 +1,5 @@
 :root{
-  --bg:#0f1226;
+  --bg:#0b1220;
   --panel:#171b3a;
   --card:#1f2555;
   --text:#e6ebff;
@@ -12,9 +12,7 @@
 }
 body{
   margin:0; font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background: radial-gradient(1200px 800px at 20% -10%, #2a2f68 0%, transparent 60%),
-              radial-gradient(900px 700px at 120% 20%, #2f236f 0%, transparent 60%),
-              var(--bg);
+  background: var(--bg);
   color:var(--text);
 }
 button{
