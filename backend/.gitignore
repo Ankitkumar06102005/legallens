@@ -1,0 +1,6 @@
+# Backend ignores
+node_modules/
+.env
+uploads/
+logs/
+*.log

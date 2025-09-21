@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/legalens/static/css/main.5ad90e59.css",
+    "main.js": "/legalens/static/js/main.5c57e867.js",
+    "index.html": "/legalens/index.html",
+    "main.5ad90e59.css.map": "/legalens/static/css/main.5ad90e59.css.map",
+    "main.5c57e867.js.map": "/legalens/static/js/main.5c57e867.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ad90e59.css",
+    "static/js/main.5c57e867.js"
+  ]
+}
