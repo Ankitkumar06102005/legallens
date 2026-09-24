@@ -1,0 +1,61 @@
+EXTREME RISK SERVICE AGREEMENT - HIGH RISK TEST DOCUMENT
+
+This Service Agreement ("Agreement") is entered into between RiskyCorp Ltd. ("Provider") and VulnerableClient Inc. ("Client") effective as of June 1, 2024.
+
+1. TERM AND AUTOMATIC RENEWAL
+This Agreement shall commence on the Effective Date and continue indefinitely. The Agreement shall automatically renew for successive five (5) year terms unless Client provides written notice of termination at least ninety (90) days prior to the expiration of the then-current term.
+
+Provider may terminate this Agreement at any time with or without cause by providing only seven (7) days written notice to Client. Client may not terminate this Agreement under any circumstances during the first three (3) years.
+
+2. PAYMENT TERMS AND PENALTIES
+Client shall pay Provider a monthly fee of $50,000 within five (5) days of invoice receipt. Late payments shall accrue interest at a rate of 15% per month, compounded daily. Provider may immediately suspend all services and charge a $10,000 reactivation fee for any payment default.
+
+All fees are non-refundable, non-cancellable, and subject to annual increases of up to 25% at Provider's sole discretion. Client agrees to pay all fees even if services are not utilized.
+
+3. UNLIMITED LIABILITY AND INDEMNIFICATION
+Client hereby waives all rights to sue Provider for any reason whatsoever. Client agrees to indemnify, defend, and hold harmless Provider from any and all claims, damages, losses, costs, and expenses (including unlimited attorneys' fees) arising from any source, including Provider's negligence, willful misconduct, or violation of law.
+
+Provider shall have no liability whatsoever, regardless of the theory of liability, including but not limited to direct, indirect, incidental, special, consequential, or punitive damages, even if Provider has been advised of the possibility of such damages.
+
+4. CONFIDENTIALITY AND DATA RIGHTS
+Client grants Provider unlimited, perpetual, irrevocable, worldwide, royalty-free rights to use, modify, sell, license, and distribute any and all data provided by Client for any purpose whatsoever, including commercial exploitation.
+
+Provider may share, sell, or transfer Client's confidential information to any third party without notice or consent. Client waives all privacy rights and agrees that Provider may monitor all communications and activities.
+
+5. FORCE MAJEURE AND ACTS OF GOD
+Provider shall not be liable for any failure or delay in performance due to any reason whatsoever, including but not limited to acts of God, war, terrorism, natural disasters, government actions, economic conditions, or any other circumstances beyond Provider's control.
+
+This provision shall apply even if Provider could have reasonably prevented or mitigated such circumstances.
+
+6. GOVERNING LAW AND DISPUTE RESOLUTION
+This Agreement shall be governed by the laws of a foreign jurisdiction chosen by Provider. All disputes shall be resolved through binding arbitration in a location chosen by Provider, with Provider selecting the arbitrator.
+
+Client waives all rights to a jury trial, class action, or any form of collective legal action. The prevailing party shall be entitled to recover all costs and expenses, including unlimited attorneys' fees.
+
+7. ASSIGNMENT AND TRANSFER
+Client may not assign or transfer this Agreement or any rights hereunder under any circumstances. Provider may assign this Agreement to any party without notice or consent.
+
+Provider may transfer all Client data and obligations to any third party without Client's knowledge or consent.
+
+8. MODIFICATION AND AMENDMENT
+Provider may modify this Agreement at any time by posting changes on their website. Continued use of services constitutes acceptance of all modifications.
+
+Client waives all rights to object to any modifications, regardless of their impact on Client's business or operations.
+
+9. ENTIRE AGREEMENT AND SEVERABILITY
+This Agreement constitutes the entire agreement between the parties. All prior agreements, representations, and warranties are hereby null and void.
+
+If any provision of this Agreement is deemed unenforceable, all remaining provisions shall remain in full force and effect, and the unenforceable provision shall be modified to the maximum extent permitted by law.
+
+10. ACKNOWLEDGMENT OF RISKS
+Client acknowledges that this Agreement contains terms that may be unfavorable to Client and that Client has had the opportunity to consult with legal counsel. Client voluntarily enters into this Agreement with full knowledge of all risks and consequences.
+
+Client waives all rights to challenge the enforceability or fairness of any provision of this Agreement.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
+
+RISKYCORP LTD.                    VULNERABLECLIENT INC.
+By: _________________________     By: _________________________
+Name: Robert Danger               Name: Naive User
+Title: CEO                        Title: President
+Date: _________________________   Date: _________________________

@@ -1,0 +1,19 @@
+SERVICE AGREEMENT
+
+1. Term and Termination. This Agreement begins on the Effective Date and continues for one (1) year, renewing automatically for successive one (1) year terms unless either party provides thirty (30) days prior written notice of non-renewal. Either party may terminate immediately for material breach not cured within ten (10) days after written notice.
+
+2. Fees and Payment. Customer shall pay all fees within fifteen (15) days of invoice. Late payments accrue interest at 1.5% per month or the maximum allowed by law, whichever is lower. Provider may suspend service for any amounts overdue by more than ten (10) days.
+
+3. Confidentiality. Each party shall protect the other party's Confidential Information using at least the same care it uses to protect its own, but no less than reasonable care. Confidentiality obligations survive for three (3) years after termination.
+
+4. Limitation of Liability. EXCEPT FOR WILLFUL MISCONDUCT OR AMOUNTS DUE UNDER INDEMNIFICATION, IN NO EVENT SHALL EITHER PARTY BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES, OR LOSS OF PROFITS, ARISING OUT OF THIS AGREEMENT. THE TOTAL AGGREGATE LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED THE AMOUNTS PAID BY CUSTOMER IN THE SIX (6) MONTHS PRECEDING THE CLAIM.
+
+5. Indemnification. Customer shall indemnify and hold harmless Provider from any claims arising out of Customer's misuse of the Services or violation of applicable law.
+
+6. Data Protection. Provider will implement reasonable and appropriate technical and organizational measures to protect Personal Data. Customer is responsible for obtaining all necessary consents for Processing.
+
+7. Assignment. Neither party may assign this Agreement without the other party's prior written consent, except to an Affiliate or in connection with a merger, acquisition, or sale of all or substantially all assets.
+
+8. Governing Law and Jurisdiction. This Agreement is governed by the laws of California, without regard to conflict of laws principles. The state and federal courts located in San Francisco County, California shall have exclusive jurisdiction.
+
+9. Entire Agreement. This Agreement constitutes the entire agreement and supersedes all prior or contemporaneous agreements.
