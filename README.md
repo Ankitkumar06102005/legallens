@@ -8,12 +8,12 @@
 [![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Gemini API](https://img.shields.io/badge/Google%20Gen%20AI-Gemini%202.5%20Flash-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222222?logo=github&logoColor=white)](https://ankitkumar06102005.github.io/legalens/)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222222?logo=github&logoColor=white)](https://legallens.ai/)
 
 **Legal Documents, Made Clear.**  
 *Transform dense contracts, complex leases, and non-disclosure agreements into crystal-clear plain English with grounded section-by-section citations and real-time risk intelligence.*
 
-[🌐 Live Demo](https://ankitkumar06102005.github.io/legalens/) · [📖 Documentation](#api-endpoints) · [⚡ Quickstart](#quickstart) · [🚀 Deployment](#deployment)
+[🌐 Live Site](https://legallens.ai/) · [🚀 GitHub Pages Backup](https://ankitkumar06102005.github.io/legallens/) · [📖 Documentation](#api-endpoints) · [⚡ Quickstart](#quickstart)
 
 </div>
 
@@ -145,8 +145,8 @@ Content-Type: application/json
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Ankitkumar06102005/legalens.git
-cd legalens
+git clone https://github.com/Ankitkumar06102005/legallens.git
+cd legallens
 ```
 
 ### 2. Install dependencies
@@ -181,12 +181,16 @@ npm start
 
 ## 🚀 Deployment
 
-### Option A: GitHub Pages (Automatic via GitHub Actions)
+### Option A: GitHub Pages (Automatic via GitHub Actions or gh-pages)
 A preconfigured workflow is included at `.github/workflows/deploy.yml`.
-1. Go to your repository on GitHub: `Settings` > `Pages`.
-2. Under **Build and deployment** > **Source**, choose **GitHub Actions**.
-3. Any push to `main` will build and publish your site automatically to:
-   `https://ankitkumar06102005.github.io/legalens/`
+1. Any push to `main` or `gh-pages` builds and publishes your site automatically to:
+   - Custom Domain: **`https://legallens.ai/`**
+   - GitHub Pages URL: **`https://ankitkumar06102005.github.io/legallens/`**
+2. Deploy manually at any time via:
+   ```bash
+   npm run build
+   npx gh-pages -d dist --cname legallens.ai
+   ```
 
 ### Option B: Vercel (1-Click Deployment)
 A `vercel.json` configuration file is included.
@@ -213,3 +217,4 @@ LEGALENS is an informational and document-intelligence tool designed to enhance 
 ## 📄 License
 
 Licensed under the [Apache License, Version 2.0](LICENSE).
+
