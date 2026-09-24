@@ -25,20 +25,20 @@ LegalLens is an AI-assisted contract analysis prototype that helps users underst
 
 ```mermaid
 flowchart TD
-    U[User] --> UI[React + React Three Fiber UI]
+    U[User] --> UI[React and React Three Fiber UI]
     UI --> UP[UploadForm]
-    UP --> API[Node.js + Express API]
-    API --> EXT[PDF/TXT Text Extraction]
+    UP --> API[Node.js and Express API]
+    API --> EXT[PDF or TXT Text Extraction]
     EXT --> TXT[Normalized Document Text]
-    TXT --> SUM[/api/summarize]
-    TXT --> RISK[/api/highlight]
-    TXT --> CMP[/api/compare]
+    TXT --> SUM[Summarize API]
+    TXT --> RISK[Highlight API]
+    TXT --> CMP[Compare API]
     SUM --> LLM[OpenAI Model]
     RISK --> LLM
     CMP --> LLM
     LLM --> JSON[Structured Analysis JSON]
-    JSON --> VIEW[DocumentViewer / Dashboard3D]
-    UI --> TR[/api/translate]
+    JSON --> VIEW[DocumentViewer and Dashboard3D]
+    UI --> TR[Translate API]
     TR --> GC[Google Cloud Translation]
     GC --> UI
 ```
