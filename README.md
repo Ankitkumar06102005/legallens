@@ -2,177 +2,308 @@
 
 <div align="center">
 
-[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![React](https://img.shields.io/badge/React-19.0.1-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+# ⚖️ LEGALENS
+
+**Read the fine print. Understand the risk. Decide with clarity.**
+
+An editorial-style legal document intelligence interface that turns contracts into searchable clauses, plain-language explanations, grounded answers, risk signals, and downloadable intelligence reports.
+
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Gemini API](https://img.shields.io/badge/Google%20Gen%20AI-Gemini%202.5%20Flash-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222222?logo=github&logoColor=white)](https://legallens.ai/)
+[![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Gemini](https://img.shields.io/badge/Google_Gemini-2.5_Flash-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
+[![License](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 
-**Legal Documents, Made Clear.**  
-*Transform dense contracts, complex leases, and non-disclosure agreements into crystal-clear plain English with grounded section-by-section citations and real-time risk intelligence.*
-
-[🌐 Live Site](https://legallens.ai/) · [🚀 GitHub Pages Backup](https://ankitkumar06102005.github.io/legallens/) · [📖 Documentation](#api-endpoints) · [⚡ Quickstart](#quickstart)
+[🌐 Live Website](https://legallens.ai/) · [🚀 GitHub Pages](https://ankitkumar06102005.github.io/legallens/) · [⚡ Quickstart](#quickstart)
 
 </div>
 
 ---
 
-## 🌟 Overview
+## 🧭 What is LEGALENS?
 
-**LEGALENS** bridges the gap between intricate legal drafting and everyday decision-making. Designed with an editorial typography aesthetic, LEGALENS reads contracts, identifies high-risk covenants, answers domain-specific legal inquiries with verbatim grounding, and surfaces relevant judicial precedents.
+LEGALENS is a client-focused legal document exploration platform for people who need to understand agreements without reading every clause in isolation.
 
-Whether evaluating a residential lease, employment agreement, software master services contract, or custom uploaded document, LEGALENS delivers actionable clarity within seconds.
+The application combines a polished React interface with a document workspace, local clause extraction, a grounded assistant, optional Gemini-powered responses, precedent discovery, and text-report export.
 
----
+Typical use cases include:
 
-## 🚀 Key Features
+- Residential leases and rental agreements
+- Employment and service agreements
+- NDAs and confidentiality documents
+- Software and business contracts
+- General uploaded TXT, Markdown, and text-readable documents
 
-- **📑 Interactive Document Analysis**: Clause-by-clause decomposition with categorized risk horizons (e.g. Caution, Notice horizons, Standard obligations).
-- **🤖 Dual-Engine Conversational Assistant**:
-  - Powered by **Google Gemini 2.5 Flash** (`@google/genai`) for deep synthetic reasoning.
-  - Built-in **Grounded Local Intelligence Engine** providing instant verbatim citations and offline fallback.
-- **🏛️ Case Law & Precedent Discovery**: Contextually matches contract clauses with landmark rulings and statutory provisions.
-- **📂 LEGALENS Studio Workspace**:
-  - Full-screen document interrogation suite.
-  - Custom file ingestion (TXT, Markdown, Contracts) with automatic clause segmentation.
-  - Multi-tab exploration: Extracted Clauses, Assistant, Precedents, and Report Export.
-- **📥 Audit Report Generation**: Generates comprehensive intelligence summaries and download-ready reports.
-- **🔒 Privacy by Design**: Zero permanent data storage; client-side grounded extraction with encrypted transient AI synthesis.
+> **Important:** LEGALENS is an informational document-intelligence tool, not a substitute for advice from a qualified legal professional.
 
 ---
 
-## 🛠️ Tech Stack
+## ✨ Core Capabilities
 
-- **Frontend**: React 19, TypeScript, Lucide React, Motion
-- **Styling**: Tailwind CSS v4, Google Fonts (Lora, Plus Jakarta Sans, JetBrains Mono)
-- **Backend / Endpoints**: Express, Vite Dev Middleware Plugin, Node.js
-- **AI & Reasoning**: Google Gen AI SDK (`@google/genai`), Gemini 2.5 Flash
-- **Bundler & Tooling**: Vite 8, TypeScript 5.8, tsx
+### 📑 Document Intelligence Workspace
+
+The `LEGALENS Studio` workspace provides:
+
+- Sample contract selection
+- User document upload
+- Full-text reading canvas
+- Clause navigation pills
+- Text filtering
+- Clause-by-clause explanations
+- Risk and attention indicators
+
+### 🤖 Grounded Legal Assistant
+
+The assistant supports two execution paths:
+
+1. **Backend-assisted path** — sends the question and document context to `POST /api/chat`.
+2. **Local fallback path** — performs keyword-based clause matching and generates a response from the active document when the API is unavailable.
+
+Assistant responses can include:
+
+- Plain-language explanations
+- Section references
+- Clause excerpts
+- Attention notes
+- The engine used for the response
+
+### ⚠️ Clause Risk Signals
+
+Clauses are organized with metadata such as:
+
+- Category
+- Section number
+- Page reference
+- Attention level
+- Parties affected
+- Plain-language explanation
+- Practical implication
+
+### 🏛️ Case-Law & Precedent Exploration
+
+The interface includes a precedent discovery section backed by structured precedent data, allowing users to explore legal concepts and related judicial references presented by the application.
+
+### 📥 Intelligence Report Export
+
+The workspace can generate a downloadable text report containing:
+
+- Document metadata
+- Executive summary
+- Extracted clauses
+- Categories and attention levels
+- Page references
+- Excerpts
+- Explanations and implications
+- Full document text
 
 ---
 
-## 📡 API Endpoints
+## 🏗️ Architecture
 
-LEGALENS includes server-side endpoints accessible both via the Vite dev server and the production Express server:
+```mermaid
+flowchart TD
+    USER[User] --> LANDING[React Landing Experience]
+    LANDING --> WORKSPACE[LEGALENS Studio]
+    WORKSPACE --> SAMPLE[Sample Documents]
+    WORKSPACE --> UPLOAD[File Upload]
+    UPLOAD --> PARSER[Client Side Text Reader]
+    PARSER --> CLAUSES[Clause Segmentation and Metadata]
+    SAMPLE --> CLAUSES
+    CLAUSES --> READER[Document Reading Canvas]
+    CLAUSES --> RISK[Risk and Attention Panel]
+    WORKSPACE --> ASSISTANT[AI Assistant]
+    ASSISTANT --> API[Express API]
+    API --> GEMINI[Google Gemini Model]
+    API --> RESPONSE[Structured Assistant Response]
+    ASSISTANT --> FALLBACK[Local Grounded Fallback]
+    RESPONSE --> CITATIONS[Section and Excerpt Citations]
+    FALLBACK --> CITATIONS
+    WORKSPACE --> PRECEDENTS[Precedent Explorer]
+    WORKSPACE --> EXPORT[Text Report Export]
+```
 
-### 1. Health & Status
+### Application flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant UI as React Workspace
+    participant Parser as Local Parser
+    participant API as Express API
+    participant AI as Gemini or Local Engine
+
+    User->>UI: Select sample or upload document
+    UI->>Parser: Read document text
+    Parser-->>UI: Create document and clause objects
+    User->>UI: Ask a legal question
+    UI->>API: Send question and document context
+    API->>AI: Generate grounded response when configured
+    AI-->>API: Return answer and metadata
+    API-->>UI: Return response and citations
+    UI-->>User: Display explanation and supporting clause
+    UI-->>User: Export intelligence report if requested
+```
+
+---
+
+## 🧰 Tech Stack
+
+| Layer | Technologies |
+|---|---|
+| Frontend | React 19, TypeScript, Vite 8 |
+| Styling | Tailwind CSS v4, Google Fonts |
+| UI and Motion | Lucide React, Motion |
+| Server | Node.js, Express, Vite middleware |
+| AI | Google Gen AI SDK, Gemini 2.5 Flash |
+| Document handling | Browser FileReader, local text segmentation |
+| Deployment | GitHub Pages, Vercel-compatible build, Node server |
+
+---
+
+## 🗂️ Project Structure
+
+```text
+legallens/
+├── .github/workflows/       # Deployment workflow
+├── public/                  # Public assets and CNAME
+├── samples/                 # Sample contract documents
+├── src/
+│   ├── components/
+│   │   ├── WorkspaceModal.tsx
+│   │   ├── AiAssistantSection.tsx
+│   │   ├── DocumentAnalysisSection.tsx
+│   │   ├── RagPipelineSection.tsx
+│   │   ├── CaseLawSection.tsx
+│   │   ├── AnnotatedPdfSection.tsx
+│   │   └── ...
+│   ├── data/
+│   │   ├── sampleDocuments.ts
+│   │   ├── casePrecedents.ts
+│   │   └── ragPipeline.ts
+│   ├── services/
+│   │   └── aiAssistantService.ts
+│   ├── App.tsx
+│   └── ...
+├── server.ts
+├── package.json
+└── README.md
+```
+
+---
+
+## 📡 API Reference
+
+The Express server exposes the following documented application routes.
+
+### Health check
+
 ```http
 GET /api/health
 ```
-**Response:**
-```json
-{
-  "status": "healthy",
-  "app": "LEGALENS AI Intelligence Platform",
-  "version": "1.0.0",
-  "geminiConfigured": true,
-  "defaultModel": "gemini-2.5-flash",
-  "uptimeSeconds": 142,
-  "timestamp": "2026-09-24T11:00:00.000Z",
-  "endpoints": [...]
-}
-```
 
-### 2. Conversational Legal Assistant
+Returns service status and runtime configuration information.
+
+### Legal assistant
+
 ```http
 POST /api/chat
 Content-Type: application/json
 ```
-**Request Body:**
+
+Example request:
+
 ```json
 {
-  "message": "What is the penalty for early termination?",
-  "docId": "residential-lease"
-}
-```
-**Response:**
-```json
-{
-  "id": "msg-1790247854453",
-  "sender": "assistant",
-  "timestamp": "04:34 pm",
-  "text": "The agreement outlines termination conditions in Section 5. Specifically, either party may terminate by providing sixty (60) days' advance written notice...",
-  "citations": [
-    {
-      "section": "Section 5",
-      "page": 2,
-      "title": "Early Termination & Transition Fee",
-      "excerpt": "Either party may terminate this Agreement prior to expiration only upon delivering sixty (60) days' prior written notice..."
-    }
-  ],
-  "attentionNote": "Contains clauses requiring careful advance notice.",
-  "engine": "grounded-intelligence-v1"
+  "message": "What are the termination conditions?",
+  "docId": "residential-lease",
+  "docTitle": "Residential Lease Agreement",
+  "docContext": "Full document text supplied by the workspace"
 }
 ```
 
-### 3. Contract Analysis & Risk Scoring
+The frontend expects an assistant response containing a text answer and may also consume:
+
+```json
+{
+  "id": "message-id",
+  "sender": "assistant",
+  "timestamp": "04:34 pm",
+  "text": "Plain-language explanation",
+  "citations": [],
+  "attentionNote": "Optional caution message",
+  "engine": "model-or-fallback-identifier"
+}
+```
+
+### Contract analysis
+
 ```http
 POST /api/analyze
 Content-Type: application/json
 ```
-**Request Body:**
-```json
-{
-  "text": "Section 1. Rent is $2000 per month payable on the 1st.\n\nSection 2. Failure to pay will incur an immediate penalty of $100 and risk forfeiture of lease."
-}
-```
-**Response:**
-```json
-{
-  "documentTitle": "Uploaded Legal Document",
-  "statistics": {
-    "totalParagraphs": 2,
-    "extractedClauses": 2,
-    "highAttentionCount": 1
-  },
-  "riskProfile": {
-    "rating": "MODERATE",
-    "summary": "Identified 1 clauses with restrictive liabilities or forfeiture clauses requiring close scrutiny."
-  },
-  "clauses": [...]
-}
-```
+
+This route is part of the application's analysis surface and is intended for document-level analysis and clause/risk output.
 
 ---
 
 ## ⚡ Quickstart
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (version 18+ or 20+ recommended)
+
+- Node.js 18+ recommended
 - npm or pnpm
+- Optional Gemini API key for model-assisted responses
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/Ankitkumar06102005/legallens.git
 cd legallens
 ```
 
 ### 2. Install dependencies
+
 ```bash
 npm install
 ```
 
-### 3. (Optional) Configure Gemini API Key
-Create a `.env` file in the root directory:
+### 3. Configure environment variables
+
+Create a `.env` file if you want to enable Gemini-backed responses:
+
 ```env
-GEMINI_API_KEY="your-gemini-api-key-here"
+GEMINI_API_KEY=your_gemini_api_key
 ```
-*(If omitted, LEGALENS automatically uses its internal Grounded Intelligence Engine with 100% functionality).*
+
+Use `.env.example` as the starting point when available. Never commit real API keys.
 
 ### 4. Start the development server
+
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### 5. Build for production
+Open:
+
+```text
+http://localhost:3000
+```
+
+### 5. Run type checking
+
+```bash
+npm run lint
+```
+
+### 6. Build the production bundle
+
 ```bash
 npm run build
 ```
 
-### 6. Run the production Express server
+### 7. Start the Express server
+
 ```bash
 npm start
 ```
@@ -181,40 +312,57 @@ npm start
 
 ## 🚀 Deployment
 
-### Option A: GitHub Pages (Automatic via GitHub Actions or gh-pages)
-A preconfigured workflow is included at `.github/workflows/deploy.yml`.
-1. Any push to `main` or `gh-pages` builds and publishes your site automatically to:
-   - Custom Domain: **`https://legallens.ai/`**
-   - GitHub Pages URL: **`https://ankitkumar06102005.github.io/legallens/`**
-2. Deploy manually at any time via:
-   ```bash
-   npm run build
-   npx gh-pages -d dist --cname legallens.ai
-   ```
+### GitHub Pages
 
-### Option B: Vercel (1-Click Deployment)
-A `vercel.json` configuration file is included.
-1. Import the repository in [Vercel](https://vercel.com).
-2. Framework preset: **Vite**.
-3. Output directory: **dist**.
-4. Click **Deploy**.
+The repository includes a deployment workflow and a custom domain configuration for:
 
-### Option C: Render / Railway / Cloud Run
-Run the production server using the Dockerfile or:
+- https://legallens.ai/
+- https://ankitkumar06102005.github.io/legallens/
+
+Build manually with:
+
+```bash
+npm run deploy
+```
+
+### Other platforms
+
+The project can also be built with:
+
 ```bash
 npm run build
+```
+
+For a Node-based deployment, start the server with:
+
+```bash
 npm start
 ```
 
 ---
 
+## 🔐 Privacy and Data Handling
+
+The current workspace performs document reading and basic clause extraction in the browser. When the assistant API is used, the frontend sends the question and document context to the configured backend route.
+
+Do not upload confidential or personally sensitive legal documents unless you understand the deployment, logging, and model-provider configuration of the environment you are using.
+
+---
+
 ## ⚖️ Legal Disclaimer
 
-LEGALENS is an informational and document-intelligence tool designed to enhance contract literacy. It does not provide legal advice, representation, or counsel. Consult a licensed attorney for formal legal matters.
+LEGALENS provides educational and informational document insights only. It does not provide legal advice, establish an attorney-client relationship, or replace a licensed attorney. Seek qualified legal counsel for decisions involving legal rights, obligations, disputes, or signatures.
 
 ---
 
 ## 📄 License
 
-Licensed under the [Apache License, Version 2.0](LICENSE).
+Licensed under the [Apache License 2.0](LICENSE).
 
+---
+
+<div align="center">
+
+**LEGALENS — Making complex agreements easier to understand.**
+
+</div>
