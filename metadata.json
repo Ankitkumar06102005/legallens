@@ -1,0 +1,6 @@
+{
+  "name": "LEGALENS — AI-Powered Legal Document Intelligence",
+  "description": "LEGALENS helps users understand complex legal documents, extract important clauses, ask grounded questions, explore case precedents, and generate annotated documents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
