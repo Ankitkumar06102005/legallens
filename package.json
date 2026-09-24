@@ -10,7 +10,7 @@
     "preview": "vite preview --port=3000",
     "start": "tsx server.ts",
     "lint": "tsc --noEmit",
-    "deploy": "vite build && gh-pages -d dist --cname legallens.ai",
+    "deploy": "vite build && npx --yes gh-pages -d dist --cname legallens.ai",
     "test": "node -e \"console.log('All checks passed.');\""
   },
   "dependencies": {
