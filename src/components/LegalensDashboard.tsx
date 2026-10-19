@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Activity, AlertCircle, ArrowRight, Bell, BookOpen, Check, CheckCircle2,
   ChevronDown, CircleHelp, Clock3, FileText, FolderOpen, Gauge, MessageCircle,
@@ -80,6 +80,10 @@ function Ring({ value, label }: { value: number; label: string }) {
   );
 }
 
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || '').replace(/\\/$/, '');
+
+type ApiStatus = 'checking' | 'online' | 'fallback';
+
 export function LegalensDashboard() {
   const [activeView, setActiveView] = useState<View>('overview');
   const [activeDocId, setActiveDocId] = useState(SAMPLE_DOCUMENTS[0].id);
@@ -96,7 +100,19 @@ export function LegalensDashboard() {
   const [selectedClauseId, setSelectedClauseId] = useState<string | null>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [uploadError, setUploadError] = useState('');
+  const [apiStatus, setApiStatus] = useState<ApiStatus>('checking');
   const fileRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 7000);
+    fetch(`${API_BASE_URL}/api/health`, { signal: controller.signal })
+      .then((response) => { if (!response.ok) throw new Error('API health check failed'); return response.json(); })
+      .then((data) => setApiStatus(data?.status === 'healthy' ? 'online' : 'fallback'))
+      .catch(() => setApiStatus('fallback'))
+      .finally(() => window.clearTimeout(timeout));
+    return () => { window.clearTimeout(timeout); controller.abort(); };
+  }, []);
 
   const allDocs = useMemo(() => [...SAMPLE_DOCUMENTS, ...uploadedDocs], [uploadedDocs]);
   const currentDoc = allDocs.find((doc) => doc.id === activeDocId) || allDocs[0];
@@ -205,7 +221,7 @@ export function LegalensDashboard() {
               <div className="min-w-0"><div className="flex items-center gap-2 text-[11px] text-[#9B95AF]"><span>Workspace</span><span>/</span><span className="truncate text-[#5D5676]">{navItems.find((item) => item.id === activeView)?.label}</span></div><h1 className="mt-1 truncate text-lg font-semibold tracking-tight text-[#2E2A40] sm:text-xl">{activeView === 'overview' ? 'Document overview' : navItems.find((item) => item.id === activeView)?.label}</h1></div>
             </div>
             <div className="flex items-center gap-2 sm:gap-3">
-              <div className="hidden items-center gap-2 rounded-full border border-[#E7E2F3] bg-[#FBFAFE] px-3 py-2 text-[11px] text-[#817A98] md:flex"><span className="h-2 w-2 rounded-full bg-[#67B995]"/>Workspace ready</div>
+              <div className="hidden items-center gap-2 rounded-full border border-[#E7E2F3] bg-[#FBFAFE] px-3 py-2 text-[11px] text-[#817A98] md:flex" title={apiStatus === "online" ? "The configured LEGALENS API health check succeeded." : apiStatus === "checking" ? "Checking the configured API." : "The API did not respond; assistant requests will use the configured fallback."}><span className={`h-2 w-2 rounded-full ${apiStatus === "online" ? "bg-[#67B995]" : apiStatus === "checking" ? "bg-[#D5A65E]" : "bg-[#C78B80]"}`}/>{apiStatus === "online" ? "API connected" : apiStatus === "checking" ? "Checking API…" : "Local fallback mode"}</div>
               <button aria-label="Notifications" className="rounded-xl p-2 text-[#8D86A5] hover:bg-[#F2EFFB]"><Bell size={18}/></button>
               <button onClick={() => fileRef.current?.click()} className="flex items-center gap-2 rounded-xl bg-[#6552C8] px-3 py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-[#5543B4] sm:px-4"><Plus size={15}/><span className="hidden sm:inline">New document</span></button>
               <input ref={fileRef} type="file" accept=".txt,.md,.markdown" onChange={handleUpload} className="hidden" />
