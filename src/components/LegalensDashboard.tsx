@@ -79,7 +79,7 @@ function Ring({ value, label }: { value: number; label: string }) {
   );
 }
 
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || '').replace(/\\/$/, '');
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '');
 
 type ApiStatus = 'checking' | 'online' | 'fallback';
 
