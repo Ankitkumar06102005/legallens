@@ -1,6 +1,9 @@
 import { LegalDocument, LegalClause } from '../data/sampleDocuments.ts';
 
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '');
+const configuredApiBaseUrl = import.meta.env.VITE_API_BASE_URL || '';
+const API_BASE_URL = configuredApiBaseUrl.endsWith('/')
+  ? configuredApiBaseUrl.slice(0, -1)
+  : configuredApiBaseUrl;
 
 export interface AssistantMessage {
   id: string;
