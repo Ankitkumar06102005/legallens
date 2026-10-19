@@ -1,9 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
-  Activity, AlertCircle, ArrowRight, Bell, BookOpen, Check, CheckCircle2,
-  ChevronDown, CircleHelp, Clock3, FileText, FolderOpen, Gauge, MessageCircle,
-  MoreHorizontal, Plus, Search, Send, Settings, ShieldCheck, Sparkles, Upload,
-  X, Scale, Menu
+  Activity, AlertCircle, ArrowRight, Bell, BookOpen, CheckCircle2, FileText,
+  FolderOpen, Gauge, MessageCircle, MoreHorizontal, Plus, Search, Send, Settings,
+  ShieldCheck, Sparkles, X, Scale, Menu
 } from 'lucide-react';
 import { SAMPLE_DOCUMENTS, LegalDocument, LegalClause } from '../data/sampleDocuments';
 import { AssistantMessage, askAssistantAsync, generateAssistantResponse } from '../services/aiAssistantService';
@@ -121,7 +120,6 @@ export function LegalensDashboard() {
   const visibleClauses = currentDoc.clauses.filter((clause) =>
     `${clause.title} ${clause.category} ${clause.excerpt} ${clause.section}`.toLowerCase().includes(search.toLowerCase())
   );
-  const latestAnswer = [...messages].reverse().find((message) => message.sender === 'assistant');
 
   const handleUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
