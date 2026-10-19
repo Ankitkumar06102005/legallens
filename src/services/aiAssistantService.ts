@@ -1,5 +1,7 @@
 import { LegalDocument, LegalClause } from '../data/sampleDocuments.ts';
 
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || '').replace(/\\/$/, '');
+
 export interface AssistantMessage {
   id: string;
   sender: 'user' | 'assistant';
@@ -117,9 +119,9 @@ export async function askAssistantAsync(
 ): Promise<AssistantMessage> {
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 8000);
+    const timeoutId = setTimeout(() => controller.abort(), 12000);
 
-    const res = await fetch('/api/chat', {
+    const res = await fetch(`${API_BASE_URL}/api/chat`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
